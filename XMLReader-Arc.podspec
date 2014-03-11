@@ -8,5 +8,4 @@ s.author       = 'Ryan Copley'
 s.source       = { :git => "https://github.com/RyanCopley/XMLReader.git", :tag => "v1.1" }
 s.source_files = "XMLReader*.{h,m}"
 s.requires_arc = true
-s.platform     = :ios
 end
