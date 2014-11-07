@@ -62,7 +62,10 @@ NSString *const kXMLReaderAttributePrefix	= @"@";
 	self = [super init];
     if (self)
     {
-        self.errorPointer = *error;
+        if (error)
+        {
+            self.errorPointer = *error;
+        }
     }
     return self;
 }
@@ -170,7 +173,10 @@ NSString *const kXMLReaderAttributePrefix	= @"@";
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError
 {
     // Set the error pointer to the parser's error object
-    self.errorPointer = parseError;
+    if (self.errorPointer)
+    {
+        self.errorPointer = parseError;
+    }
 }
 
 @end
